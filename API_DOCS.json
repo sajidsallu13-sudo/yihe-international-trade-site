@@ -1,0 +1,164 @@
+{
+  "info": {
+    "name": "YIHE International Trade Services API",
+    "description": "API for contact forms, supplier registration, and admin endpoints",
+    "version": "1.0.0",
+    "contact": {
+      "email": "mohd.yihe@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:4000",
+      "description": "Local development"
+    },
+    {
+      "url": "https://your-backend.onrender.com",
+      "description": "Production (Railway/Render)"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "API root",
+        "responses": {
+          "200": {
+            "description": "API info"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check endpoint",
+        "responses": {
+          "200": {
+            "description": "Server is healthy"
+          }
+        }
+      }
+    },
+    "/api/status": {
+      "get": {
+        "summary": "API status and endpoints",
+        "responses": {
+          "200": {
+            "description": "API status"
+          }
+        }
+      }
+    },
+    "/api/contact": {
+      "post": {
+        "summary": "Submit a contact form",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "John Doe"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "example": "john@example.com"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "I'd like to inquire about your services"
+                  }
+                },
+                "required": ["name", "email", "message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Contact submitted successfully"
+          },
+          "400": {
+            "description": "Missing required fields"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      }
+    },
+    "/api/supplier/register": {
+      "post": {
+        "summary": "Register as a supplier",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "company_name": {
+                    "type": "string",
+                    "example": "ABC Import/Export Ltd"
+                  },
+                  "contact_name": {
+                    "type": "string",
+                    "example": "Jane Smith"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "example": "jane@supplier.com"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "example": "+1-555-0123"
+                  },
+                  "country": {
+                    "type": "string",
+                    "example": "China"
+                  }
+                },
+                "required": ["company_name", "email"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Supplier registered successfully"
+          },
+          "400": {
+            "description": "Missing required fields"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      }
+    },
+    "/api/suppliers": {
+      "get": {
+        "summary": "Get all registered suppliers (admin)",
+        "responses": {
+          "200": {
+            "description": "List of suppliers"
+          }
+        }
+      }
+    },
+    "/api/contacts": {
+      "get": {
+        "summary": "Get all contact submissions (admin)",
+        "responses": {
+          "200": {
+            "description": "List of contact submissions"
+          }
+        }
+      }
+    }
+  }
+}
