@@ -1,0 +1,28 @@
+Subject: Welcome to YIHE — Supplier Registration Confirmation
+
+Dear {{company_name}},
+
+Thank you for registering with YIHE International Trade Services!
+
+Your registration details:
+- Company: {{company_name}}
+- Contact: {{contact_name}}
+- Email: {{email}}
+- Phone: {{phone}}
+- Country: {{country}}
+
+Next Steps:
+We will review your information within 2-3 business days. Our team will contact you to discuss:
+- Your product categories and experience
+- Quality certifications and compliance standards
+- Capacity and production capabilities
+- Pricing and payment terms
+
+Questions in the meantime? Reply to this email or contact us:
+📧 Email: mohd.yihe@gmail.com
+🌍 Website: https://yihe-international-trade-site.vercel.app
+
+We look forward to partnering with you!
+
+Best regards,
+YIHE International Trade Services Team

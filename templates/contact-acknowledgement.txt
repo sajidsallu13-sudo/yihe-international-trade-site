@@ -1,0 +1,22 @@
+Subject: Thank You for Contacting YIHE
+
+Dear {{name}},
+
+Thank you for reaching out to YIHE International Trade Services!
+
+We received your message:
+---
+{{message}}
+---
+
+Our team will review your inquiry and contact you within 24-48 hours with next steps.
+
+In the meantime, you can explore:
+- Our Services: https://yihe-international-trade-site.vercel.app/services
+- Blog & Resources: https://yihe-international-trade-site.vercel.app/blog
+- About Us: https://yihe-international-trade-site.vercel.app/about
+
+If you have any urgent questions, feel free to reply to this email.
+
+Best regards,
+YIHE International Trade Services Team

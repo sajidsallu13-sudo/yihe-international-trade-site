@@ -1,0 +1,19 @@
+Subject: New Contact Form Submission from {{name}}
+
+Dear YIHE Team,
+
+A new contact message has been received:
+
+---
+Name: {{name}}
+Email: {{email}}
+Submitted: {{date}}
+
+Message:
+{{message}}
+---
+
+Please respond to {{email}} or forward to the appropriate team member.
+
+Best regards,
+YIHE System
